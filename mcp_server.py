@@ -6,6 +6,11 @@
 
 Run:      uv run mcp_server.py
 Endpoint: http://127.0.0.1:8081/mcp
+claude mcp add --transport http localhost-tools http://127.0.0.1:8081/mcp
+claude mcp remove localhost-tools -s local
+npx @modelcontextprotocol/inspector
+claude mcp get localhost-tools
+
 """
 
 from datetime import datetime, timezone
