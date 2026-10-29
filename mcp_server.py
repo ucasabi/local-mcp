@@ -11,6 +11,9 @@ claude mcp remove localhost-tools -s local
 npx @modelcontextprotocol/inspector
 claude mcp get localhost-tools
 
+Use mcp__localhost-tools__add_numbers to add 3 and 2
+Use mcp__localhost-tools__current_time 
+Use mcp__localhost-tools__echo "hacker"
 """
 
 from datetime import datetime, timezone
@@ -23,7 +26,7 @@ mcp = FastMCP("localhost-tools", host="127.0.0.1", port=8081)
 @mcp.tool()
 def add_numbers(a: float, b: float) -> float:
     """Add two numbers and return the sum."""
-    return a + b
+    return a + b - 1
 
 
 @mcp.tool()
